@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Simon Says</title>
+</head>
+<body>
+    
+<div class="container">
+
+    
+
+    <div class="score">
+
+        <div class="alert-msg">
+            <p class="success">Correct! Keep going!</p>
+            <p class="fail">Wrong! Try again!</p>
+        </div>
+
+        <p>Current score: <span class="primary-span current-score">0</span></p>
+        <p>Round: <span class="primary-span round">0</span></p>
+        <p>Best score: <span class="primary-span best-score">0</span></p>
+    </div>
+
+    <div class="boxes">
+
+        <div class="dual-boxes">
+            <div class="box red"></div>
+            <div class="box green"></div>
+        </div>
+        
+        <div class="dual-btns">
+            <button class="primary-btn game-btn">Start Game</button>
+            <button class="primary-btn reset-btn">Reset Score</button>
+        </div>
+        
+        <div class="dual-boxes">
+            <div class="box blue"></div>
+            <div class="box yellow"></div>
+        </div>
+    </div>
+
+</div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

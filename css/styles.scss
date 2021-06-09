@@ -1,0 +1,224 @@
+
+// Main
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0, 0, 0, 0.89);
+}
+
+// Content
+
+.container {
+    background: linear-gradient(rgb(19, 19, 19), rgb(31, 30, 30));
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+
+    .score {
+        font-size: 1.2rem;
+        color: #fff;
+        width: 40rem;
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        position: relative;
+
+
+        .alert-msg {
+            color: #fff;
+            font-size: 1.5em;
+            position: absolute;
+            text-transform: initial;
+            z-index: 1;
+            top: -7rem;
+            left: 50%;
+            transform: translate(-50%);
+    
+            .success,
+            .fail {
+                font-family: 'Times New Roman', Times, serif;
+                position: relative;
+                display: none;
+            }
+    
+            .success {
+                color: rgb(3, 189, 3);
+            }
+    
+            .fail {
+                color: rgb(255, 31, 31);
+            }
+        }
+    
+        .primary-span {
+            padding: .2em .4em;
+            text-align: center;
+            border-radius: .4rem;
+            font-size: 1em;
+        }
+
+        .current-score {
+            background: green;
+            color: #fff;
+        }
+
+        .round {
+            background: yellow;
+            color: #000;
+        }
+
+        .best-score {
+            background: red;
+            color: #fff;
+        }
+    }
+
+    .dual-btns {
+        display:flex;
+        justify-content: center;
+    }
+
+    .primary-btn {
+        font-size: .9em;
+        width: 25%;
+        height: 2rem;
+        margin: .7rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:white;
+        border: none;
+        border-radius: 1.2rem;
+        padding: 1.4em;
+        text-decoration: none;
+        background: linear-gradient(rgb(15, 15, 15),rgb(55, 51, 56));
+        border: 1px solid #f1f1f1;
+
+        &:hover {
+            cursor: pointer;
+            background: linear-gradient(rgb(44, 44, 44),rgb(84, 79, 85));
+        }
+
+        &:disabled {
+            color: #000;
+            background: linear-gradient(rgb(175, 175, 175),rgb(134, 134, 134));
+        }
+
+        &:disabled:hover {
+            cursor: not-allowed;
+        }
+
+    }
+
+    .game-btn {
+        margin-right: 2.5rem;
+    }
+
+    .dual-boxes {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .box {
+        width: 20rem;
+        height: 15rem;
+        margin: 1rem;
+        filter: brightness(60%);
+        border-radius: .3rem;
+        border: .2rem solid #000;
+
+        &:hover {
+            cursor: pointer;
+            filter: brightness(100%);
+        }
+    }
+
+    .red {
+        background: red;
+        border-top-left-radius: 1.3rem;
+    }
+    
+    .green {
+        background: green;
+        border-top-right-radius: 1.3rem;
+    }
+    
+    .blue {
+        background: blue;
+        border-bottom-left-radius: 1.3rem;
+    }
+    
+    .yellow {
+        background: yellow;
+        border-bottom-right-radius: 1.3rem;
+    }
+
+    .active {
+        filter: brightness(100%);
+        transform: scale(1.020);
+        transition: all ease .1s;
+    }
+}
+
+@media (max-width: 1360px) {
+    font-size: 1.5em;
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        justify-content: initial;
+
+        .score {
+            width: 100%;
+            font-size: .8rem;
+            padding: 0 1rem;
+
+            .alert-msg {
+                display: none;
+            }
+        }
+
+        .boxes {
+            width: 70%;
+            margin: 1rem auto 0 auto;
+        }
+
+        .dual-boxes {
+            flex-direction: column;
+        
+            .box {
+                width: 100%;
+                margin: 0 auto;
+                height: 8rem;
+                border-radius: .7rem;
+                margin-bottom: .7rem;
+            }
+        }
+
+        .dual-btns {
+            
+            .primary-btn {
+                font-size: .7em;
+                width: 40%;
+                margin: .3rem auto 1rem auto;
+                border-radius: .4rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
