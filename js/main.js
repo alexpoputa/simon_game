@@ -38,6 +38,15 @@ const displayText = () => {
 
 displayText();
 
+// Reset stats function
+
+const resetStats = () => {
+    playerArr = [];
+    computerArr = [];
+    score = 0;
+    round = 1;
+}
+
 // Generate random value from boxArr
 
 const generateBox = () => {
@@ -147,23 +156,12 @@ const checkResult = () => {
             fail.style.display = "none";
         }, 1500);
 
-        playerArr = [];
-        computerArr = [];
-        score = 0;
-        round = 1;
-
+        resetStats();
         displayText();
     }
 }
 
 // Start and Reset buttons
-
-const resetStats = () => {
-    playerArr = [];
-    computerArr = [];
-    score = 0;
-    round = 1;
-}
 
 start.addEventListener("click", () => {
     resetStats();
